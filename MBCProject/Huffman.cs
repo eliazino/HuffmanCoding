@@ -45,7 +45,7 @@ namespace MBCProject {
                         branched.Add(keys[1], secondLeast);
                         var newTreeObj = new TreeObj { frequency = newFrequency, Branch = branched  };
 
-                        // Remove the created Objs
+                        // Remove the least two object colapsed
                         dictionary.Remove(keys[0]);
                         dictionary.Remove(keys[1]);
 
@@ -61,7 +61,9 @@ namespace MBCProject {
             }
             return (encodingDictionary, dictionary);
         }
-        public string decodeObj(Dictionary<char, string> encodedObj, SortedDictionary<KeyObj, TreeObj> treeObj) {
+
+
+        public string verifyEncoding(Dictionary<char, string> encodedObj, SortedDictionary<KeyObj, TreeObj> treeObj) {
             string decoded = "";
             foreach(KeyValuePair<char, string> kvp in encodedObj) {
                 var leftOrRight = kvp.Value.ToList();
@@ -97,10 +99,8 @@ namespace MBCProject {
         private Dictionary<char, string> logCharMap(Dictionary<char, string> map, string characters, string position) {
             var updatable = map.Where(kvp => characters.Contains(kvp.Key));
             var newMap = map;
-            foreach (char key in map.Keys.ToList()) {
-                if (!characters.Contains(key))
-                    continue;
-                newMap[key] = string.Concat(position, newMap[key]);
+            foreach (KeyValuePair<char, string> keyValue in updatable.ToList()) {
+                newMap[keyValue.Key] = string.Concat(position, newMap[keyValue.Key]);
             }
             return newMap;
         }

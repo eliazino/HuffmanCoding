@@ -11,8 +11,8 @@ namespace MBCProject {
             foreach(KeyValuePair<char, string> kvp in data.encodedObj) {
                 Console.WriteLine("{0} => {1}", kvp.Key, kvp.Value);
             }
-            var decoded = new Huffman().decodeObj(data.encodedObj, data.treeObj);
-            Console.WriteLine(decoded);
+            var verification = new Huffman().verifyEncoding(data.encodedObj, data.treeObj);
+            Console.WriteLine(verification);
             Console.ReadLine();
         }
     }

@@ -32,7 +32,6 @@ namespace MBCProject {
                         } else {
                             encodingDictionary = logCharMap(encodingDictionary, keys[0].charLib, "0");
                         }
-
                         if (secondLeast.BranchIsLeaf()) {
                             encodingDictionary = logCharMap(encodingDictionary, (char)secondLeast.Branch, "1");
                         } else {

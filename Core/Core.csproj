@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Application\DTOs\Request\" />
+    <Folder Include="Application\Interfaces\Repository\MongoDB\" />
     <Folder Include="Application\Interfaces\UseCases\" />
     <Folder Include="Application\Services\UseCases\" />
     <Folder Include="Models\Entities\" />

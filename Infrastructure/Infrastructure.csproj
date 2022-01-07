@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\Cache\" />
-    <Folder Include="Repository\Others\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Elasticsearch.Net" Version="7.16.0" />

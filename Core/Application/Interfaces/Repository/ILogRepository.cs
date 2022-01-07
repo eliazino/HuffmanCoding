@@ -6,8 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Core.Application.Interfaces.Repository {
-    public interface IBankAccountRepository {
-        Task<bool> createAccount(BankAccount account);
-        Task<List<BankAccount>> getAccount(BankAccountFilter filter);
+    public interface ILogRepository {
+        Task<bool> create(Logs dictionary);
+        Task<bool> update(Logs data);
+        Task<List<Logs>> get(LogFilter filter);
     }
 }

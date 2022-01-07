@@ -5,10 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Application\DTOs\Request\" />
     <Folder Include="Application\Interfaces\UseCases\" />
     <Folder Include="Application\Services\UseCases\" />
-    <Folder Include="Models\Entities\" />
     <Folder Include="Models\Enums\" />
     <Folder Include="Models\ValueObjects\" />
     <Folder Include="Properties\PublishProfiles\" />

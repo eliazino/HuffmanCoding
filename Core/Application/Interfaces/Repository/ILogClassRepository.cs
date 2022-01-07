@@ -6,9 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Core.Application.Interfaces.Repository {
-    public interface IBusRepository {
-        Task<IEnumerable<Bus>> getBus(BusFilter filter);
-        Task<IEnumerable<Fares>> getBusFare(int routeID);
-        Task<double> getBusMaxFare(int routeID);
+    public interface ILogClassRepository {
+        Task<bool> create(LogClass data);
+        Task<bool> update(LogClass data);
+        Task<List<LogClass>> get(long id);
+        Task<List<LogClass>> get();
     }
 }

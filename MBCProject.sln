@@ -13,19 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IS", "IS", "{34096B5C-FDAD-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CardInteractor", "CardInteractor", "{1C1D8B3B-7022-44B7-A667-284109313486}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{1150858E-AB23-468E-A761-62C5BC6A3D6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{1150858E-AB23-468E-A761-62C5BC6A3D6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{08A0717F-83E4-4A14-AEA8-98839B217AE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{08A0717F-83E4-4A14-AEA8-98839B217AE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{DE1BB755-DAAF-4A28-A03E-20576034D335}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{DE1BB755-DAAF-4A28-A03E-20576034D335}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardInteractor", "CardInteractor\CardInteractor.csproj", "{4FC9A986-5B99-4417-9FC4-98DD7FAE2745}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardInteractor", "CardInteractor\CardInteractor.csproj", "{4FC9A986-5B99-4417-9FC4-98DD7FAE2745}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northbound", "Northbound\Northbound.csproj", "{2D5A1C03-B6D2-4C2C-AEE4-2F01AC6689AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northbound", "Northbound\Northbound.csproj", "{2D5A1C03-B6D2-4C2C-AEE4-2F01AC6689AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Southbound", "Southbound\Southbound.csproj", "{1E686D87-E530-4FBC-9EC2-4934B8A6542B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Southbound", "Southbound\Southbound.csproj", "{1E686D87-E530-4FBC-9EC2-4934B8A6542B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{BA164467-0C2C-4321-9035-11BFC227F60A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "Console\ConsoleApp.csproj", "{BA164467-0C2C-4321-9035-11BFC227F60A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

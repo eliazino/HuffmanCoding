@@ -11,7 +11,7 @@ namespace Infrastructure.Interfaces.SQlite {
         Task<bool> commit();
         Task<bool> isExist(string sql, IEnumerable<object> q);
         Task<QueryResult<T>> selectFromQuery<T>(string sql, IEnumerable<object> q);
-        Task<bool> logActivity(string logDetails, string logCategory, string creator, string issuerID);
-
+        Task<bool> createTableIfNotExists<T>(T tableObject);
+        Task<bool> executeInLine(string sql, IEnumerable<object> q);
     }
 }

@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MBCProject {
+namespace LogicBase.HuffmanLib {
     public class Huffman {
         public (Dictionary<char, string> encodedObj, SortedDictionary<KeyObj, TreeObj> treeObj) encode(string text) {
             var dictionary = getCharacterFrequency(text);
             var encodingDictionary = new Dictionary<char, string>();
-            if(dictionary.Count > 0) {
+            if (dictionary.Count > 0) {
                 while (true) {
-                    if(dictionary.Count > 1) {
+                    if (dictionary.Count > 1) {
                         //Dump the new Keys
                         KeyObj[] keys = new KeyObj[dictionary.Count];
                         dictionary.Keys.CopyTo(keys, 0);
@@ -42,7 +42,7 @@ namespace MBCProject {
                         var branched = new SortedDictionary<KeyObj, TreeObj>();
                         branched.Add(keys[0], least);
                         branched.Add(keys[1], secondLeast);
-                        var newTreeObj = new TreeObj { frequency = newFrequency, Branch = branched  };
+                        var newTreeObj = new TreeObj { frequency = newFrequency, Branch = branched };
 
                         // Remove the least two object colapsed
                         dictionary.Remove(keys[0]);
@@ -64,7 +64,7 @@ namespace MBCProject {
 
         public string verifyEncoding(Dictionary<char, string> encodedObj, SortedDictionary<KeyObj, TreeObj> treeObj) {
             string decoded = "";
-            foreach(KeyValuePair<char, string> kvp in encodedObj) {
+            foreach (KeyValuePair<char, string> kvp in encodedObj) {
                 var leftOrRight = kvp.Value.ToList();
                 var activeObj = treeObj.FirstOrDefault().Value.Branch;
                 var branchAsDic = (SortedDictionary<KeyObj, TreeObj>)activeObj;
@@ -110,7 +110,7 @@ namespace MBCProject {
             SortedDictionary<KeyObj, TreeObj> maps = new SortedDictionary<KeyObj, TreeObj>();
             string newstr = String.Join("", text.Distinct());
             foreach (char c in newstr) {
-                int count = text.Count(o=> o == c);
+                int count = text.Count(o => o == c);
                 var key = new KeyObj(count, c.ToString());
                 var treeObj = new TreeObj() { Branch = c, frequency = count };
                 maps.Add(key, treeObj);
@@ -118,20 +118,20 @@ namespace MBCProject {
             maps.OrderBy(x => x.Key.frequency);
             return maps;
         }
-    }
-    public class TreeObj {
-        public int frequency { get; set; }
-        public object Branch { get; set; }
-        public bool BranchIsLeaf() {
-            if (Branch.GetType().Equals(typeof(char))) {
-                return true;
+        public class TreeObj {
+            public int frequency { get; set; }
+            public object Branch { get; set; }
+            public bool BranchIsLeaf() {
+                if (Branch.GetType().Equals(typeof(char))) {
+                    return true;
+                }
+                return false;
             }
-            return false;
         }
-    }
-    public class KeyObj : Tuple<int, string> {
-        public KeyObj(int frequency, string charLib) : base(frequency, charLib) { }
-        public int frequency => Item1;
-        public string charLib => Item2;
+        public class KeyObj : Tuple<int, string> {
+            public KeyObj(int frequency, string charLib) : base(frequency, charLib) { }
+            public int frequency => Item1;
+            public string charLib => Item2;
+        }
     }
 }

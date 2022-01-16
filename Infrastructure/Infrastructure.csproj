@@ -7,6 +7,18 @@
   <ItemGroup>
     <Folder Include="Interfaces\Cache\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\DependencyValidation\DependencyValidation1.layerdiagram" Link="DependencyValidation1.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\DependencyMap\DependencyValidation1.layerdiagram" Link="DependencyValidation1.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Elasticsearch.Net" Version="7.16.0" />
     <PackageReference Include="FirebaseAdmin" Version="2.2.0" />

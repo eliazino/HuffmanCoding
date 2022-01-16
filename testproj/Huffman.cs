@@ -1,5 +1,6 @@
-using MBCProject;
+using LogicBase.HuffmanLib;
 using NUnit.Framework;
+using static LogicBase.HuffmanLib.Huffman;
 
 namespace testproj {
     [TestFixture]

@@ -9,7 +9,7 @@ namespace Core.Application.Interfaces.Repository {
     public interface ICodeDictionaryRepository {
         Task<bool> create(CodeDictionary dictionary);
         Task<bool> update(CodeDictionary data);
-        Task<List<Admin>> get(long id, long humanID);
-        Task<List<Admin>> get();
+        Task<List<CodeDictionary>> get(long id, long humanID);
+        Task<List<CodeDictionary>> get();
     }
 }

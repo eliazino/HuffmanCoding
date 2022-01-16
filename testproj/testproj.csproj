@@ -7,6 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <AdditionalFiles Include="..\DependencyValidation\DependencyValidation1.layerdiagram" Link="DependencyValidation1.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\DependencyMap\DependencyValidation1.layerdiagram" Link="DependencyValidation1.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
     <PackageReference Include="NUnit" Version="3.13.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
@@ -14,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MBCProject\MBCProject.csproj" />
+    <ProjectReference Include="..\Console\LogicBase.csproj" />
   </ItemGroup>
 
 </Project>

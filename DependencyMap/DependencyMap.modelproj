@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5f81f350-55b7-4891-8412-577c9b5065ee}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>DependencyMap</Name>
+    <RootNamespace>DependencyMap</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Validate Include="DependencyValidation1.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="DependencyValidation1.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DependencyValidation1.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="DependencyValidation1.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>DependencyValidation1.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CardInteractor\CardInteractor.csproj">
+      <Name>CardInteractor</Name>
+      <Project>{4fc9a986-5b99-4417-9fc4-98dd7fae2745}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Name>Core</Name>
+      <Project>{08a0717f-83e4-4a14-aea8-98839b217ae2}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
